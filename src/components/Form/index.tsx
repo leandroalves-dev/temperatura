@@ -1,16 +1,20 @@
 import { useState } from "react"
+//icons
 import { BsSearch } from 'react-icons/bs'
+//interface
 import { Temperature } from "../../interface/Temperature"
-import { getTemperatura } from "../../services/temperaturaServices"
 import { Prevision } from "../../interface/Prevision";
+//serviços
+import { getTemperatura } from "../../services/temperaturaServices"
+
 
 
 interface FormProps {
-    // Aqui, a função onTemperatureChange agora recebe dois parâmetros: temperature e prevision
+    onChangeModal: () => void
     onTemperatureChange: (temperature: Temperature | null, prevision: Prevision | null) => void;
 }
 
-const Form = ({ onTemperatureChange }: FormProps) => {
+const Form = ({ onTemperatureChange, onChangeModal }: FormProps) => {
     const [city, setCity] = useState('');
     
 
@@ -24,12 +28,14 @@ const Form = ({ onTemperatureChange }: FormProps) => {
 
         } catch (err) {
             if (err instanceof Error) {
+                onChangeModal()
                 console.log('Cidade não encontrada: ' + err.message);
             } else {
                 console.log('Erro desconhecido');
             }
         }
     }
+    
 
     return (
         <div>
