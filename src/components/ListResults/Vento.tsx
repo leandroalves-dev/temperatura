@@ -5,7 +5,7 @@ interface VentoProps{
 
 const Vento = ({ deg, speed }: VentoProps) => {
     return (
-        <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] p-3">
+        <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] sm:w-[100%] md:w-[100%] p-3">
             <h4 className="text-white/80 text-[18px] border-b border-white/15 pb-3">Vento</h4>
             <div className="flex flex-col mt-1">
                 <p className="text-[12px] text-zinc-700 pt-3">Direção: {deg}°</p>

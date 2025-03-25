@@ -35,7 +35,7 @@
         
 
         return (
-            <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] p-3">
+            <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] max-sm:w-[100%] sm:w-[100%] md:w-[100%] lg:w-[50%] p-3">
                 <h4 className="text-white/80 text-[18px] border-b border-white/15 pb-3">Previsão para os proximos dias</h4>
                 {dias.map((dia, index) => (
                     

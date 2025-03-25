@@ -12,5 +12,4 @@ export const formatTimestamp = (timestamp: number) => {
         formattedMonth: `${month}`,
         formattedTime: `${hour}:${seconds}`
     }
-
 }

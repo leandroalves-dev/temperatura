@@ -4,17 +4,16 @@ const APIKEY = import.meta.env.VITE_API_KEY
 
 export const getTemperatura = async(city: string) => {
     try {
-  
-        //const response = await Api.get(`/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`)
+       
         const response = await Api.get(`/weather?q=${city}&appid=${APIKEY}&units=metric&lang=pt_br`)
         const prevision = await Api.get(`/forecast?q=${city}&appid=${APIKEY}&units=metric&lang=pt_br`)
 
-        console.log('response', response.data);
-        console.log('prevision', prevision.data);
+        console.log('Retorna dados da cidade selecionada:', response.data);
+        console.log('Retorna a previsão:', prevision.data);
 
         return {
             response: response.data, 
-            prevision: prevision.data  // Previsão para os próximos dias
+            prevision: prevision.data
         };
         
     } catch (error) {

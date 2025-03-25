@@ -4,7 +4,7 @@ interface NuvensProps{
 
 const Nuvens = ({ clouds }: NuvensProps) => {
     return (
-        <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] p-3">
+        <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] sm:w-[100%] md:w-[100%] p-3">
             <h4 className="text-white/80 text-[18px] border-b border-white/15 pb-3">Nuvens</h4>
             <div className="flex flex-col justify-between">
                 <div className="text-white py-4">
