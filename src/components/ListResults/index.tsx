@@ -1,11 +1,11 @@
 import { Prevision } from "../../interface/Prevision"
 import { Temperature } from "../../interface/Temperature"
 import Container from "../Container"
-import NascerDoSol from "./NascerDoSol"
-import PorDoSol from "./PorDoSol"
+import Curiosidades from "./Curiosidades"
+import Nuvens from "./Nuvens"
+import Sol from "./Sol"
 import Umidade from "./Umidade"
 import Vento from "./Vento"
-
 
 interface ListResultsProps{
     temperature: Temperature | null
@@ -15,11 +15,6 @@ interface ListResultsProps{
 const ListResults = ({ temperature, prevision} : ListResultsProps) => {
 
     if(! temperature || !prevision) return null
-
-    const timestamp = temperature.sys.sunrise; 
-    const date = new Date(timestamp * 1000); 
-
-    console.log('ADSADSAD', date.toLocaleString());
 
     return (
         <Container>
@@ -38,7 +33,7 @@ const ListResults = ({ temperature, prevision} : ListResultsProps) => {
                 </div> 
 
                 <div className="flex gap-5 p-3 mt-10 w-full">
-                    <div className="w-[70%]  flex flex-col gap-5">
+                    <div className="w-[60%]  flex flex-col gap-5">
 
                         <div className="flex flex-col w-full bg-white/10 border border-white/15 p-3 rounded-[5px]">
 
@@ -75,28 +70,28 @@ const ListResults = ({ temperature, prevision} : ListResultsProps) => {
 
                         </div>
                         <div className="flex w-full gap-5">
-                            <div className="w-[50%] bg-white/10 border border-white/15 p-3 rounded-[5px]">
+                            <div className="w-[40%] bg-white/10 border border-white/15 p-3 rounded-[5px]">
                                 2
                             </div>
-                            <div className="w-[50%]">
-                                <Umidade />
+                            <div className="w-[60%]">
+                                <Umidade humidity={temperature.main.humidity} />
                                 <div className="flex gap-5">
-                                    <NascerDoSol />
-                                    <PorDoSol />
+                                    <Sol timestamp={temperature.sys.sunrise} title="Nascer do Sol" label="Amanhecer"  />
+                                    <Sol timestamp={temperature.sys.sunset} title="Pôr do Sol" label="Enterdecer" />
                                 </div>
                             </div>
                         </div>
 
                     </div>
                     
-                    <div className="w-[30%]">
+                    <div className="w-[40%]">
                         <div className="flex flex-col gap-5">
                             <div className="w-full bg-white/10 border border-white/15 rounded-[5px] p-3">
-                                6
+                                <Curiosidades country={prevision.city.country} name={prevision.city.name} population={prevision.city.population} />
                             </div>
                             <div className="flex gap-5">
-                                <Vento />
-                                <div className="bg-white/10 border border-white/15 rounded-[5px] w-[50%] p-3">8</div>
+                                <Vento deg={temperature.wind.deg} speed={temperature.wind.speed} />
+                                <Nuvens clouds={temperature.clouds.all} />
                             </div>
                         </div>
                     </div>

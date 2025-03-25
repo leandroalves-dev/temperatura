@@ -4,15 +4,22 @@ export interface Temperature{
         lat: number
         lon: number
     },
+    clouds:{
+        all: number
+    },
     main: {
         temp: number
-        humadity: number
+        humidity: number
         temp_max: number
         temp_min: number
     },
     sys: {
         sunrise: number
         sunset: number
+    },
+    wind: {
+        deg: number
+        speed: number
     },
     weather: {
         description: string
