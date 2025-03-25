@@ -28,4 +28,6 @@ Por se tratar da uma versão gratuita, foi explorado com varias informações de
     ```bash
     npm run dev
 
+## API OpenWeather
+
 Link da api [clique aqui](https://openweathermap.org/)
