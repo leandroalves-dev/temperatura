@@ -40,7 +40,13 @@
                 {dias.map((dia, index) => (
                     
                     <div key={index} className="flex justify-between items-center">
-                        <h3 className="text-white capitalize w-8">{new Date(dia.date).toLocaleDateString("pt-BR", { weekday: "short" })}</h3> 
+                        <h3 className="text-white capitalize w-8">
+                            {(() => {
+                                const data = new Date(dia.date);
+                                data.setDate(data.getDate() + 1); 
+                                return data.toLocaleDateString("pt-BR", { weekday: "short" });
+                            })()}
+                        </h3>
                         {dia.forecasts.length > 0 && (
                             <img 
                                 src={`https://openweathermap.org/img/wn/${dia.forecasts[0].weather[0].icon}.png`} 

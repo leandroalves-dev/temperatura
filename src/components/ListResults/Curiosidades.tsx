@@ -17,13 +17,12 @@ const Curiosidades = ({ country, name, population }: CuriosidadesProps) => {
         <div>
             <h4 className="text-white/80 text-[20px] border-b border-white/15 pb-3">Curiosidade da cidade!</h4>
             <div className="mt-4">
+                <p className="text-sm text-white">Sabia que <strong className="border-b-2 border-white">{name}</strong> é uma cidade localizada no <strong className="border-b-2 border-white">{country}</strong>? Com uma
+                população de aproximadamente **<strong className="border-b-2 border-white">{qtdaPopulation}</strong>** habitantes</p>
 
-                <div className="flex justify-center items-center m-4">
-                    <img src={flag} alt={`Bandeira ${country}`} className="rounded-full w-36.5 h-36.5 object-cover" />
+                <div className="flex justify-center items-center mt-4">
+                    <img src={flag} alt={`Bandeira ${country}`} className="rounded-full w-27 h-27 object-cover" />
                 </div>
-
-                <p className="text-sm text-white">Sabia que <strong>{name}</strong> é uma cidade localizada no <strong>{country}</strong>? Com uma
-                população de aproximadamente **<strong>{qtdaPopulation}</strong>** habitantes</p>
             </div>
         </div>
     )

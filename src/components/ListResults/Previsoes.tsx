@@ -28,7 +28,7 @@ const Previsoes = ({ prevision, timestamp }: PrevisoesProps) => {
                             <div className="flex item-center">
                                 <img className="w-10" src={`https://openweathermap.org/img/wn/${list.weather[0].icon}.png`} alt={list.weather[0].description} />
                             </div>
-                            <p className="text-sm text-white">{list.main.temp.toFixed(0)}º</p>
+                            <p className="text-sm text-white">{list.main.temp.toFixed(0)}ºC</p>
                         </li>
                     );
                 })}

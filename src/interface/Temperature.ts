@@ -6,7 +6,8 @@ export interface Temperature{
     },
     clouds:{
         all: number
-    },
+    },    
+    dt: number,
     main: {
         temp: number
         humidity: number
