@@ -25,7 +25,7 @@ function App() {
     return (
         <div className='bg-gradient-to-b from-blue-200 to-blue-600 min-h-screen flex flex-col'>
             <div className=' bg-white/10 h-20'>
-                <Container className='flex h-20 justify-between items-center'>
+                <Container className='flex h-20 justify-between items-center px-3'>
                     <Logo />
                     <Form onTemperatureChange={handleTemperatureChange} onChangeModal={toggleModal}  />
                 </Container>
