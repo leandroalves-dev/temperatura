@@ -1,7 +1,7 @@
 # Meu Projeto
 
 Este é um sistema onde você escolhe uma cidade e retorna os dados da temperatura. Feito com uma api externa chamada OpenWeather.
-Por se tratar da uma versão gratuita, foi explorado com varias informações de retorno. 
+Por se tratar de uma versão gratuita, foi explorado com varias informações de retorno. 
 
 ## Tecnologias usadas
 
