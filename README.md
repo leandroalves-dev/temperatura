@@ -13,6 +13,11 @@ Por se tratar de uma versão gratuita, foi explorado com varias informações de
 - ![Axios Badge](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white)
 - ![Responsivo](https://img.shields.io/badge/Responsivo-Sim-00C853?style=for-the-badge&logo=responsive&logoColor=white)  
 
+**Demonstração do projeto**
+
+<img width="400" height="200" alt="Image" src="https://github.com/user-attachments/assets/7d89e0cb-2ca2-4c2f-9b8a-253423bc346c" />
+<img width="400" height="200" alt="Image" src="https://github.com/user-attachments/assets/2e134639-aae5-4673-a25a-0bf4fcc3d338" />
+<img width="400" height="200" alt="Image" src="https://github.com/user-attachments/assets/9b8e3bd6-6844-48f7-b985-9d670d3f5fdd" />
 
 ## Como rodar o projeto
 
